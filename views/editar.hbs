@@ -1,0 +1,41 @@
+<div class="container">
+    <form class="form-group" action="/api/product/{{products._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="input-group">
+            <label class="input-group-text" for="_id">ID</label>
+            <input type="text" class="form-control" value="{{products._id}}" name="_id" id="_id" disabled>
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="Nombre">Nombre</label>
+            <input type="text" class="form-control" value="{{products.name}}" name="name" id="Nombre">
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="Price">Price</label>
+            <input type="number" class="form-control" value="{{products.price}}" id="Price" name="price">
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="category">Category</label>
+            <select class="form-select" id="category" name="category" required>
+                <option value="Computers">Computers</option>
+                <option value="Phones">Phones</option>
+                <option value="Accesories">Accesories</option>
+                <option value="{{products.category}}" selected>{{products.category}}</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="description">Description</label>
+            <input type="text" class="form-control" value="{{products.description}}" name="description"
+                id="description">
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="picture">Picture</label>
+            <input type="text" class="form-control" value="{{products.picture}}" name="picture" id="picture">
+        </div>
+        <div class=" d-flex flex-row justify-content-evenly">
+            <button type="submit" class="btn btn-primary">Modificar</button>
+            <a href="/api/product" class="btn btn-warning mx-3">Cancelar</a>
+            <button type="submit" formaction="/api/product/{{products._id}}?_method=delete" method="POST"
+                class="btn btn-danger">Eliminar</button>
+        </div>
+    </form>
+</div>

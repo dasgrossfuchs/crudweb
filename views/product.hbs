@@ -1,0 +1,32 @@
+<div class="container">
+    <form action="/api/product" method="POST">
+        <div class="input-group">
+            <label class="input-group-text" for="Nombre">Nombre</label>
+            <input type="text" class="form-control" value="" name="name" placeholder="Name" id="Nombre">
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="Price">Price</label>
+            <input type="number" class="form-control" value="" placeholder="Introduce a price" id="Price" name="price">
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="category">Category</label>
+            <select class="form-select" id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="Computers">Computers</option>
+                <option value="Phones">Phones</option>
+                <option value="accessories">Accessories</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="description">Description</label>
+            <input type="text" class="form-control" value="" placeholder="Write a description" name="description"
+                id="description">
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="picture">Picture</label>
+            <input type="text" class="form-control" value="" placeholder="Url for your avatar" name="picture"
+                id="picture">
+        </div>
+        <button type="submit" class="btn btn-primary">GUARDAR</button>
+    </form>
+</div>
