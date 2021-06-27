@@ -11,9 +11,11 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
+                    {{#if loggedIn}}
                     <li class="nav-item">
                         <a href="/insertproduct" class="nav-link">Insertar</a>
                     </li>
@@ -21,11 +23,17 @@
                         <a href="/api/product" class="nav-link">Productos</a>
                     </li>
                     <li class="nav-item">
+                        <a href="/auth/logout" class="nav-link">Cerrar Sesión</a>
+                    </li>
+                    {{/if}}
+                    {{#unless loggedIn}}
+                    <li class="nav-item">
                         <a href="/user/register" class="nav-link">Registrarse</a>
                     </li>
                     <li class="nav-item">
                         <a href="/user/login" class="nav-link">Iniciar Sesión</a>
                     </li>
+                    {{/unless}}
                 </ul>
             </div>
         </div>
